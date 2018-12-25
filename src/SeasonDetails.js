@@ -6,15 +6,15 @@ class SeasonDetail extends Component {
   }
 
   makeList(props) {
-    console.log(this.props.seasonData);
     return this.props.seasonData.map((val, key) => {
       return val.data.Episodes.map((val, key) => {
+        const { Title, imdbRating } = val;
         return (
           <li key={key}>
-            <h2>{val.Title}</h2>
+            <h2>{Title}</h2>
             <p>
               <span>Rating : </span>
-              {val.imdbRating}
+              {imdbRating}
             </p>
           </li>
         );

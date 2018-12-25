@@ -13,6 +13,7 @@ class SeasonsButton extends Component {
     for (let i = 1; i <= numberOfSeasons; i++) {
       tempHTML.push(
         <li
+          key={i}
           onClick={e => {
             this.props.fetchSeasonDetails(i);
           }}

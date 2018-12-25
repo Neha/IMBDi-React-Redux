@@ -9,29 +9,38 @@ class LandingPage extends Component {
   }
 
   getData() {
-    return this.props.data.map(val => {
+    return this.props.data.map((val, key) => {
+      const {
+        imdbRating,
+        Released,
+        Writer,
+        Genre,
+        Poster,
+        Title,
+        totalSeasons
+      } = val.data;
       return (
-        <div>
+        <div key={key}>
           <section className="Left">
-            <h1>{val.data.Title}</h1>
+            <h1>{Title}</h1>
             <figure>
-              <img src={val.data.Poster} />
+              <img src={Poster} />
             </figure>
           </section>
           <section className="right">
             <p>
-              <span>Rating :</span> {val.data.imdbRating}
+              <span>Rating :</span> {imdbRating}
             </p>
             <p>
-              <span>Released Date :</span> {val.data.Released}
+              <span>Released Date :</span> {Released}
             </p>
             <p>
-              <span>Writer :</span> {val.data.Writer}
+              <span>Writer :</span> {Writer}
             </p>
             <p>
-              <span>Genre :</span> {val.data.Genre}
+              <span>Genre :</span> {Genre}
             </p>
-            <SeasonsButton seasonNumber={val.data.totalSeasons} />
+            <SeasonsButton seasonNumber={totalSeasons} />
           </section>
         </div>
       );
