@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  margin: 20px;
+  display: inline-grid;
+  width: 40%;
+}
+
+ul li {
+  text-align: left;
+  margin: 5px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background: #eee;
+  border: 1px solid #999;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.Left {
+  width: 40%;
+  float: left;
+}
+
+.right {
+  padding-top: 20px;
+  text-align: left;
+  width: 40%;
+  float: left;
+}
+
+p span {
+  font-weight: bold;
+}
+
+.contentDetails h2 {
+  font-size: 20px;
+}
+
+.list li {
+  text-decoration: underline;
+  color: #009688;
+  font-weight: bold;
+  cursor: pointer;
+}
