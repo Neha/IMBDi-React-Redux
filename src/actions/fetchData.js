@@ -2,7 +2,7 @@ import BaseURL from "../API/data";
 import axios from "axios";
 
 const fetchData = () => {
-  return async (dispatch, getState) => {
+  return async dispatch => {
     const response = await axios.get(
       "http://www.omdbapi.com/?t=Game%20of%20Thrones&type=series&apikey=e448099d"
     );
