@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "axios": "latest",
+    "firebase": "^5.7.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-redux": "latest",

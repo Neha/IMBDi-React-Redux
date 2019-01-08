@@ -6,20 +6,19 @@ class SeasonDetail extends Component {
   }
 
   makeList(props) {
-    return this.props.seasonData.map((val, key) => {
-      return val.data.Episodes.map((val, key) => {
-        const { Title, imdbRating } = val;
-        return (
-          <li key={key}>
-            <h2>{Title}</h2>
-            <p>
-              <span>Rating : </span>
-              {imdbRating}
-            </p>
-          </li>
-        );
-      });
-    });
+    let tempList = [];
+    for (let val in this.props.seasonData[0].data.Episodes) {
+      tempList.push(
+        <li>
+          <h2>{this.props.seasonData[0].data.Episodes[val].Title}</h2>
+          <p>
+            <span>Rating : </span>
+            {this.props.seasonData[0].data.Episodes[val].imdbRating}
+          </p>
+        </li>
+      );
+    }
+    return tempList;
   }
   render() {
     return <ul className="contentDetails">{this.makeList()}</ul>;
