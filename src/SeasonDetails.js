@@ -7,13 +7,14 @@ class SeasonDetail extends Component {
 
   makeList(props) {
     let tempList = [];
-    for (let val in this.props.seasonData[0].data.Episodes) {
+    let episodesData = this.props.seasonData[0].data.Episodes;
+    for (let val in episodesData) {
       tempList.push(
         <li>
-          <h2>{this.props.seasonData[0].data.Episodes[val].Title}</h2>
+          <h2>{episodesData[val].Title}</h2>
           <p>
             <span>Rating : </span>
-            {this.props.seasonData[0].data.Episodes[val].imdbRating}
+            {episodesData[val].imdbRating}
           </p>
         </li>
       );
